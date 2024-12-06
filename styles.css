@@ -1,0 +1,260 @@
+/* Reseta os estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #cb9b83;
+}
+
+/* Estilo da navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fdfcf4;
+    padding: 10px 0;  /* Aumentando o espaçamento da navbar */
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: #554133;
+    text-decoration: none;
+    padding: 15px 25px;  /* Aumentando o espaçamento para tornar a navegação mais confortável */
+    margin: 0 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+/* Efeito de sublinhado na navbar */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #cb9b83;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s, left 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Efeito parallax para a imagem */
+.parallax {
+    background-image: url('images/head.jpg'); /* Substitua pelo caminho da sua imagem */
+    height: 100vh; /* Aumentando a altura para melhor visualização */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.parallax h1, .parallax h2, .parallax h3 {
+    margin: 0;
+    text-align: left;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    
+}
+
+
+
+.parallax h3 {
+    font-size: 36px;
+    font-weight: normal;
+    animation-delay: 0.5s;
+}
+
+.parallax h1 {
+    font-size: 80px;
+    font-weight: bold;
+    animation-delay: 1s;
+}
+
+.parallax h2 {
+    font-size: 50px;
+    font-weight: normal;
+    animation-delay: 1.5s;
+}
+
+/* Animação para os títulos */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos do texto na seção de início */
+.left-title h1,
+.left-title h2,
+.left-title h3 {
+    text-align: left;
+    color: white;
+}
+
+/* Seção Quem sou eu */
+#quemsoueu {
+    background-color: #fdfcf4;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.content-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #7a462d;
+}
+
+.content-container p {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #7a462d;
+}
+
+/* Frame circular para a foto */
+.photo-frame {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #7a462d;
+    margin-bottom: 20px;
+}
+
+.photo-frame .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Seção Ensino */
+#ensino {
+    
+    padding: 60px 0;
+}
+
+#ensino h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #7a462d;
+}
+
+#ensino h2 {
+    font-size: 32px;
+    text-align: center;
+    color: #7a462d;
+    margin-bottom: 30px;
+}
+
+#ensino p {
+    color: #eee7de;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção de Contato */
+#contato {
+    padding: 50px 0;
+}
+
+#contato h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #7a462d;
+    margin-bottom: 40px;
+}
+
+#contato p {
+    color: #eee7de;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* Ícones de redes sociais */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icons a {
+    display: block;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .parallax h1 {
+        font-size: 60px;
+    }
+
+    .parallax h2 {
+        font-size: 40px;
+    }
+
+    .parallax h3 {
+        font-size: 28px;
+    }
+
+    .content-container h1 {
+        font-size: 30px;
+    }
+
+    .content-container p {
+        font-size: 16px;
+    }
+
+    .photo-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
