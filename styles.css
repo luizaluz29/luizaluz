@@ -312,21 +312,28 @@ nav a:hover::after {
 
 /* Responsividade para a seção de Contato */
 @media (max-width: 768px) {
-    #contato .social-icons {
-        flex-direction: column; /* Reorganiza os ícones em uma coluna */
-        gap: 20px; /* Reduz o espaçamento entre os ícones */
+    .social-icons {
+        flex-direction: row; /* Mantém os ícones em linha */
+        justify-content: center; /* Centraliza os ícones */
+        gap: 15px; /* Espaçamento entre os ícones */
     }
 
-    #contato .social-icons img {
-        width: 40px; /* Ajusta o tamanho dos ícones para telas menores */
+    .social-icons img {
+        width: 40px; /* Reduzindo o tamanho dos ícones */
         height: 40px;
     }
 }
 
 @media (max-width: 480px) {
-    #contato {
-        padding: 20px 10px; /* Reduz o padding geral */
+    .social-icons img {
+        width: 30px; /* Ajuste adicional para telas muito pequenas */
+        height: 30px;
     }
+
+    .social-icons {
+        gap: 10px; /* Reduzindo o espaçamento entre ícones */
+    }
+}
 
     #contato h1 {
         font-size: 28px; /* Ajusta o tamanho do título */
