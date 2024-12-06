@@ -183,7 +183,58 @@ nav a:hover::after {
     max-width: 800px;
     margin: 0 auto;
 }
+/* Responsividade para a seção Ensino */
+@media (max-width: 1024px) {
+    #ensino h1 {
+        font-size: 36px;
+    }
 
+    #ensino h2 {
+        font-size: 28px;
+    }
+
+    #ensino p {
+        font-size: 16px;
+        padding: 0 20px; /* Adicionando espaçamento interno para telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    #ensino {
+        padding: 40px 0; /* Reduzindo o padding geral */
+    }
+
+    #ensino h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    #ensino h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    #ensino p {
+        font-size: 14px;
+        line-height: 1.5; /* Ajustando o espaçamento entre linhas para melhorar a leitura */
+    }
+}
+
+@media (max-width: 480px) {
+    #ensino {
+        padding: 30px 10px; /* Mais ajustes no padding para telas bem pequenas */
+    }
+
+    #ensino h1, #ensino h2 {
+        text-align: left; /* Realinhando os textos para melhor legibilidade em telas pequenas */
+        padding-left: 10px; /* Adicionando um pouco de margem à esquerda */
+    }
+
+    #ensino p {
+        font-size: 12px;
+        padding: 0 10px; /* Diminuindo o espaçamento lateral */
+    }
+}
 /* Seção de Contato */
 #contato {
     padding: 50px 0;
@@ -256,5 +307,38 @@ nav a:hover::after {
     .social-icons img {
         width: 40px;
         height: 40px;
+    }
+}
+
+/* Responsividade para a seção de Contato */
+@media (max-width: 768px) {
+    #contato .social-icons {
+        flex-direction: column; /* Reorganiza os ícones em uma coluna */
+        gap: 20px; /* Reduz o espaçamento entre os ícones */
+    }
+
+    #contato .social-icons img {
+        width: 40px; /* Ajusta o tamanho dos ícones para telas menores */
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contato {
+        padding: 20px 10px; /* Reduz o padding geral */
+    }
+
+    #contato h1 {
+        font-size: 28px; /* Ajusta o tamanho do título */
+    }
+
+    #contato p {
+        font-size: 14px; /* Diminui o tamanho do texto */
+        padding: 0 10px; /* Adiciona espaçamento lateral */
+    }
+
+    #contato .social-icons img {
+        width: 30px; /* Ícones ainda menores em telas muito pequenas */
+        height: 30px;
     }
 }
